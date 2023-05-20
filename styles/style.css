@@ -1,0 +1,670 @@
+@import url(reset.css);
+@import url(fonts.css);
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto Flex', sans-serif; 
+    font-family: 'Rounded Elegance', sans-serif; 
+    background-color: #f8f8f8;
+}
+
+:root {
+    --textColorBlack: black;
+    --textColorGreen: #4e9f3d;
+    --textColorDarkGreen: #1E5128;
+    ---textColorOrange: #e17d20;
+    ---textColorWhite: white;
+    ---textColorDarkGrey: color: rgba(0, 0, 0, 0.7);
+    --textColorLightGrey: #8D8D8D;
+    --textColorDark: #191A19;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    /* если писать padding, то к max-width прибавлять 2*padding */
+    /* padding: 0 15px; */
+    display: flex;
+    align-items: center;
+}
+
+/* -----------HEADER */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(---textColorWhite);
+}
+
+.header .container {
+    padding: 27px 0;
+}
+
+.logo {
+    margin-right: 45px;
+}
+
+.nav {
+    display: flex;
+    gap: 30px;
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 22px;
+    margin-right: 64px;
+    color: var( --textColorBlack);
+}
+
+.header form {
+    width: 100%;
+    max-width: 300px;
+    height: 43px;
+    margin-right: 90px;
+}
+
+.search {
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/icons/search.svg);
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    border: 1px solid #0000004D;
+    border-radius: 10px;
+    /* чтобы сместить курсор ввода */
+    padding: 15px;
+}
+/* 
+.icon-search {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+} */
+
+.contacts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 220px;
+    row-gap: 5px;
+    flex-wrap: wrap;
+}
+
+.viber, .whatsapp {
+    margin-right: 5px;
+}
+
+.telegram, .phone {
+    margin-right: 10px;
+}
+
+.tel {
+    font-family: 'Roboto Flex', sans-serif; 
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21px;
+    color: var(---textColorDarkGrey);
+}
+
+.call {
+    font-family: 'Inter', sans-serif; 
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    text-decoration: underline;
+    color: var( --textColorBlack);
+}
+
+/* -----------MAIN */
+section {
+    margin-bottom: 150px;
+}
+
+.hero {
+    margin-top: 50px;
+}
+
+.hero .container {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.hero-slogan {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.hero-title { 
+    font-family: 'Rounded Elegance', sans-serif;
+    font-size: 80px;
+    font-weight: 400;
+    line-height: 92px;
+    color: var( --textColorBlack);
+}
+
+.title-green {
+    color: var(--textColorGreen);
+}
+
+.hero-subtitle {
+    font-family: 'Inter', sans-serif; 
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    /* width: 100%; */
+    max-width: 425px;
+}
+
+.title-location {
+    font-family: 'Inter', sans-serif; 
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 20px;
+    color: var( --textColorBlack);
+}
+
+.section-title {
+    font-family: 'Rounded Elegance', sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 57px;
+    /* у большинства, потом переопределить */
+    margin-bottom: 60px;  
+    color: var( --textColorBlack); 
+}
+
+.about .container {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.about-data {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 139px;
+    row-gap: 40px;
+    margin-left: 384px;
+    margin-bottom: 40px;
+
+}
+
+.about-desc {
+    font-family: 'Inter', sans-serif; 
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    max-width: 700px;
+    color: var(---textColorDarkGrey);
+}
+
+.about-round-link {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0.01em;
+    padding: 85px 25px;
+    background: var( ---textColorWhite);
+    border: 1px solid var( --textColorBlack);
+    border-radius: 100px;
+    color: var( --textColorBlack);
+}
+
+.products .container {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.products .title-green {
+    display: block;
+    margin-left: 32px;
+}
+
+.products-data {
+    display: flex;
+    gap: 80px;
+}
+
+.products-items {
+    width: 100%;
+    /* вопрос */
+    min-width: 700px;
+}
+
+.products-items-point {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 34px;
+    padding-top: 27px;
+    padding-bottom: 19px;
+    padding-left: 20px;
+    border-top: 2px solid #0000004D;
+}
+
+.products-items-point:last-child {
+    border-bottom: 2px solid #0000004D;
+}
+
+.products-info-img {
+    margin-bottom: 60px;
+}
+
+.products-info-text {
+    width: 100%;
+    max-width: 630px;
+    font-family: 'Roboto Flex', sans-serif; 
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 31px;
+    letter-spacing: 0.01em;
+    margin-bottom: 40px;
+    color: var(--textColorBlack);
+}
+
+.products-info-btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 31px;
+    letter-spacing: 0.01em;
+    padding: 15px 77px;
+    border-radius: 5px;
+    color: var(---textColorWhite);
+    background-color: var(---textColorOrange);
+}
+
+.features .container {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.features .title-green {
+    display: block;
+    margin-left: 380px;
+}
+
+.features-data {
+    display: flex;
+}
+
+.features-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 55px;
+    padding: 60px 44px;
+    border-image: url(../assets/icons/horizontal\ border.svg);
+}
+
+.features-item-header {
+    font-family: 'Rounded Elegance', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: var(--textColorDark);
+}
+
+.features-item-text {
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 31px;
+    letter-spacing: 0.01em;
+    text-align: center;
+    width: 100%;
+    max-width: 409px;
+    color: #191A19CC;
+}
+
+.services .container {
+    align-items: flex-start;
+    row-gap: 70px;
+    column-gap: 60px;
+    flex-wrap: wrap;
+}
+
+.services .section-title {
+    margin-right: 260px;
+}
+
+.services-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.services-item-img {
+    width: 460px;
+    height: 380px;
+}
+
+.services-item-header {
+    width: 100%;
+    max-width: 460px;
+    font-family: 'Inter', sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: var(--textColorDark);
+}
+
+.sales .container {
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sales .section-title {
+    margin-bottom: 72px; 
+}
+
+.sales-header {
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.sales-link {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    text-decoration: underline;
+    color: var(--textColorBlack);
+}
+
+.sales-items {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sales-item {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(---textColorWhite);
+    box-shadow: 0px 8px 15px 0px #00000026;
+}
+
+.sales-item-img {
+    margin-bottom: 12px;
+}
+
+.sales-item-header {
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 30px;
+    margin-bottom: 10px;
+    color: var(--textColorBlack);
+}
+
+.sales-item-tag {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    padding: 3px 8px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 120px;
+    margin-bottom: 19px;
+    color: var(---textColorWhite);
+    background-color: var(--textColorDark);
+}
+
+.sales-item-price {
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+    margin-bottom: 21px;
+    color: var(--textColorDarkGreen);
+}
+
+.sales-item-links {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 31px;
+    letter-spacing: 0.01em;
+    color: var(---textColorWhite);
+}
+
+.sales-item-links-go { 
+    padding: 7px 57px;
+    border-radius: 5px;
+    background-color: var(---textColorOrange);  
+}
+
+.sales-item-links-discount {
+    padding: 7px 17px;
+    border-radius: 5px;
+    background-color: var(--textColorDarkGreen); 
+}
+
+.form {
+    display: flex;
+    justify-content: center;  
+}
+
+.form-slogan {
+    font-family: 'Rounded Elegance', sans-serif;
+    font-size: 45px;
+    font-weight: 400;
+    line-height: 57px;
+    padding: 80px 142px 563px;
+    background-color: #D8E9A8;
+    color: var(--textColorBlack);
+}
+
+.form-data {
+    padding: 80px 281px 91px;
+    border-top: 1px solid #0000004D;
+    border-bottom: 1px solid #0000004D;
+    background-color: var(---textColorWhite);
+}
+
+.form-data-header {
+    font-family: 'Rounded Elegance', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin-bottom: 56px;
+    width: 100%;
+    max-width: 539px;
+    color: #505050;
+}
+
+.form-data-fields {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    column-gap: 50px;
+    margin-bottom: 30px;
+    max-width: 650px;
+}
+
+.form-data-fields-name { 
+    max-width: 300px;
+    min-height: 60px;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 35px;
+    letter-spacing: 0.01em;
+    border: none;
+    border-bottom: 1px solid var(--textColorLightGrey);
+    color: var(--textColorLightGrey);
+    background-color: var(---textColorWhite);
+}
+
+.form-data-fields-tel { 
+    max-width: 300px;
+    min-height: 60px;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 35px;
+    letter-spacing: 0.01em;
+    border: none;
+    border-bottom: 1px solid var(--textColorBlack);
+    color: var(--textColorBlack);
+    background-color: var(---textColorWhite);
+}
+
+.form-data-comment {
+    min-width: 610px;
+    min-height: 150px;
+    margin-bottom: 30px;
+    border: 1px solid var(--textColorLightGrey)
+}
+
+.form-data-comment::placeholder {    
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0.01em;
+    padding-top: 14px;
+    padding-left: 26px;
+}
+
+.form-data-submit {
+    display: flex;
+    align-items: center;
+}
+
+.form-data-submit-btn {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 33px;
+    letter-spacing: 0.01em;
+    padding: 14px 65px;
+    border-radius: 5px;
+    margin-right: 35px;
+    background-color: var(---textColorOrange);
+    color: var(---textColorWhite);
+}
+
+.form-data-submit-text {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 19px;
+    color: var(--textColorLightGrey);
+}
+
+/* -----------FOOTER */
+
+.footer {
+    color: var(---textColorWhite);
+    background-color: var(--textColorDark);
+}
+
+.footer .container {
+    width: 100%;
+    justify-content: space-between;
+    padding: 88px 0;   
+}
+
+.footer .nav {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: var(---textColorWhite);
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;   
+    align-items: center;
+}
+
+.footer-logo-img {
+    font-family: 'Rounded Elegance', sans-serif; 
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 57px;
+    margin-bottom: 31px;
+}
+
+.footer-logo-rights {
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 23px;
+    letter-spacing: 0.02em;
+    margin-bottom: 72px;
+}
+
+.footer-logo-link {
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 35px;
+    letter-spacing: 0.02em;
+    text-decoration: underline;
+}
+
+.footer-logo-contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 40px;
+}
+
+.footer-logo-contacts .search {
+    width: 300px;
+    height: 43px;
+    border: 1px solid var(---textColorWhite);
+    border-radius: 10px;
+    background-color: var(--textColorDark);
+}
+
+.call-white {
+    font-family: 'Inter', sans-serif; 
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    text-decoration: underline;
+    color: var( ---textColorWhite);
+}
+
+/* не видно в верстке, почему? */
+.footer form {
+    position: relative;
+}
+
+.footer form .icon-search {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
